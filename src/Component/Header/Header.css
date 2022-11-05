@@ -1,0 +1,14 @@
+header{
+    background-color: var(--bg-color-secondary);
+    padding: .8rem 0;
+    filter: drop-shadow(0 4px 3px rgb(0 0 0 / 0.07)) drop-shadow(0 2px 2px rgb(0 0 0 / 0.06));
+}
+
+.header-wrapper{
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo{
+    font-size: 1.5rem;
+}

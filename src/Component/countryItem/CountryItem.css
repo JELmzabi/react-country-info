@@ -1,0 +1,37 @@
+.countryItem{
+    filter: drop-shadow(0 4px 3px rgb(0 0 0 / 0.07)) drop-shadow(0 2px 2px rgb(0 0 0 / 0.06));
+    background-color: var(--bg-color-secondary);
+    border-radius: 5px;
+    overflow: hidden;
+    
+}
+
+
+.countryItem figure{
+    width: 100%;
+    height: 180px;
+}
+
+.countryItem-flag{
+    max-width: 100%;
+    
+    /* object-fit: cover; */
+}
+
+.countryItem-info{
+    padding: 1rem;
+    text-transform: capitalize;
+}
+
+.countryItem-info h3{
+    margin-bottom: 1rem;
+
+}
+
+.countryItem-info ul{
+    list-style-type: none;
+}
+
+.countryItem-info ul li{
+    margin-bottom: .5rem;
+}

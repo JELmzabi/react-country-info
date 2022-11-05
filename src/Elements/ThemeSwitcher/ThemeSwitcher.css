@@ -1,0 +1,7 @@
+.theme-switcher-button{
+    border: none;
+    background: transparent;
+    font-weight: 600;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
