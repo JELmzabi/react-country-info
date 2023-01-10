@@ -1,22 +1,21 @@
-import react, { Component, useEffect, useState } from "react"
+import { useContext, useEffect } from "react"
+import { ThemeContext } from "../../Context/ThemeContext"
 import "./ThemeSwitcher.css"
 
 const ThemeSwitcher = ( props ) => {
-    const [ isDarkModeActive, setIsDarkModeActive ] = useState(false);
+    const { isDarkModeActive, updateThemeMode } = useContext(ThemeContext)
 
     const switchTheme = () => {
-        setIsDarkModeActive( prevMode => !prevMode )
+        updateThemeMode( prevMode => !prevMode )
     }
 
     useEffect( ()=> {
         const isDark = JSON.parse(localStorage.getItem("isDark")) ?? false;
-        setIsDarkModeActive(isDark)
-        props.changeTheme(isDark)
+        updateThemeMode(isDark)
     }, [] )
     
     useEffect(()=> {
         localStorage.setItem("isDark", isDarkModeActive)
-        props.changeTheme(isDarkModeActive)
     }, [isDarkModeActive])
     
     return (

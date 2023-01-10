@@ -1,9 +1,9 @@
-import React from "react";
+import { Link } from "react-router-dom";
 import "./CountryItem.css";
 
 const CountryItem = ({ flag, name, population, region, capital }) => {
   return (
-    <a href={`/${name}`}>
+    <Link to={`country/${name}`}>
       <article className="countryItem">
         <figure>
           <img src={flag} className="countryItem-flag" />
@@ -23,7 +23,7 @@ const CountryItem = ({ flag, name, population, region, capital }) => {
           </ul>
         </div>
       </article>
-    </a>
+    </Link>
   );
 };
 

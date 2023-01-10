@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import BackButton from "../../Elements/BackButton/BackButton";
 import "./CountryDetails.css";
 
@@ -17,9 +18,6 @@ const CountryDetails = ({ countryInfo }) => {
     borders,
   } = countryInfo;
   return (
-    <section className="container">
-      <BackButton />
-
       <div className="country_details ">
         <div className="country_details-flag">
           <img src={flags.svg} />
@@ -41,7 +39,7 @@ const CountryDetails = ({ countryInfo }) => {
                 <strong>sub region:</strong> {subregion}
               </li>
               <li>
-                <strong>capital:</strong> {capital}
+                <strong>capital: </strong> {capital}
               </li>
             </ul>
             <ul>
@@ -49,11 +47,11 @@ const CountryDetails = ({ countryInfo }) => {
                 <strong>top level domain:</strong> {topLevelDomain}
               </li>
               <li>
-                <strong>currencies:</strong>{" "}
+                <strong>currencies: </strong>
                 {currencies.map((currencie) => currencie.name).join(", ")}
               </li>
               <li>
-                <strong>languages:</strong>{" "}
+                <strong>languages: </strong>
                 {[
                   ...languages.map((language) => language.name),
                 ].toLocaleString()}
@@ -65,14 +63,13 @@ const CountryDetails = ({ countryInfo }) => {
             <strong>border countries:</strong>
 
             {borders.map((border, id) => (
-              <a href={`/${border.toLowerCase()}`} key={id}>
+              <Link to={`/country/${border.toLowerCase()}`} key={id}>
                 <span>{border}</span>
-              </a>
+              </Link>
             ))}
           </div>
         </div>
       </div>
-    </section>
   );
 };
 export default CountryDetails;

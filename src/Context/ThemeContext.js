@@ -1,9 +1,9 @@
-import { useContext, useState } from "react"
+import { createContext, useState } from "react"
 
-export const ThemeContext = useContext();
+export const ThemeContext = createContext();
 
 const ThemeContextProvider = ( props ) => {
-    const  [ isDarkModeActive, updateThemeMode ] = useState(flase);
+    const  [ isDarkModeActive, updateThemeMode ] = useState(false);
 
     return (
         <ThemeContext.Provider value={{isDarkModeActive, updateThemeMode}} >

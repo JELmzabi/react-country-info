@@ -1,4 +1,3 @@
-import React from "react";
 import ThemeSwitcher from "../../Elements/ThemeSwitcher/ThemeSwitcher";
 import "./Header.css";
 
@@ -7,7 +6,7 @@ const Header = (props) => {
         <header>
             <div className="container header-wrapper">
                 <h1 className="logo">Where in the world?</h1>
-                <ThemeSwitcher changeTheme={props.changeTheme}/>
+                <ThemeSwitcher />
             </div>
         </header>
     );
