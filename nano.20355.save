@@ -1,0 +1,9 @@
+Add Routing
+
+        - install 'react-router-dom' module
+        - add root.jsx, countries-page.jsx, country-page.jsx
+	- remove App.js, index.css
+        - rename App.css to root.css and move it to /routes
+        - add routes to index.js
+        - update countries border links
+	- update countryItem links

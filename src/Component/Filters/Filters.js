@@ -6,7 +6,7 @@ import "./Filters.css";
 
 const SearchingTools = () => {
   return (
-    <div className="tools container">
+    <div className="tools">
       <SearchInput />
       <Dropdown />
     </div>

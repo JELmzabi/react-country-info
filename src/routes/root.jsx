@@ -10,7 +10,9 @@ const App = () => {
     return (
             <div className={`App ${isDarkModeActive ? "dark" : "light"}`}>
                 <Header />
-                <Outlet />
+                <main className='container'>
+                    <Outlet />
+                </main>
             </div>
     )
 }

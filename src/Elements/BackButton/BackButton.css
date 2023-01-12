@@ -6,4 +6,5 @@
     font-weight: 600;
     color: var(--text-color-primary);
     border: 1px solid;
+    place-self: flex-start;
 }

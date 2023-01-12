@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import CountryDetails from "../Component/countryDetails/CountryDetails"
+import Loading from "../Component/Loading/Loading";
 import BackButton from "../Elements/BackButton/BackButton";
     
 const CountryPage = () => {
@@ -40,15 +41,12 @@ const CountryPage = () => {
     }, [countryName])
     
     return (
-        <section className="container">
-            
-            {isLoaded ? 
+            isLoaded ? 
                 <>
                     <BackButton />
                     <CountryDetails countryInfo={countryInfo}/> 
                 </>
-                    : "Loading ..."}
-        </section>
+                    : <Loading />
     )
 }
 
