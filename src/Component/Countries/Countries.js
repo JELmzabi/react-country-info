@@ -27,7 +27,7 @@ const Countries = () => {
     <>
       { error ? <Error message="Country not found" /> :
             isLoaded ? 
-                <div className="countries container">{RenderCountries()}</div> 
+                <div className="countries">{RenderCountries()}</div> 
             : <Loading /> }
     </>
   );

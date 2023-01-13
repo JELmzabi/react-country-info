@@ -1,7 +1,15 @@
 
 .tools{
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     margin-top: 2rem;
     margin-bottom: 2rem;
+}
+
+@media (min-width: 565px) {
+    .tools{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+    }
 }

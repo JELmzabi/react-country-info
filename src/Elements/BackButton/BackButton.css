@@ -8,3 +8,9 @@
     border: 1px solid;
     place-self: flex-start;
 }
+
+@media (max-width: 565px) {
+    .back_button{
+        margin: 1rem 0;
+    }
+}
