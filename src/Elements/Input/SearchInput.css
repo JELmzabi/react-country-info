@@ -1,5 +1,5 @@
 .input__wrapper{
-    width: 300px;
+    width: 100%;
     padding: .6rem 1rem;
     display: flex;
     align-items: center;
@@ -7,7 +7,7 @@
     filter: drop-shadow(0 4px 3px rgb(0 0 0 / 0.07)) drop-shadow(0 2px 2px rgb(0 0 0 / 0.06));
     background-color: var(--bg-color-secondary);
     color: var(--text-color-secondary);
-
+    margin-bottom: 1rem;
 }
 
 .input__wrapper .input-icon{
@@ -23,4 +23,12 @@
     margin-left: 1rem;
     color: inherit;
     font-size: 16px;
+}
+
+
+@media (min-width: 565px) {
+    .input__wrapper{
+        width: 300px;
+        margin-bottom: 0;
+    }
 }
