@@ -15,7 +15,7 @@ export const CountriesContext = createContext()
         updateLoadingState(false) // hasnot lodoaded yet
         updateError(false)
 
-        URL = `https://restcountries.com/v2/all?fields=name,flags,capital,population,region`;
+        const URL = `https://restcountries.com/v2/all?fields=name,flags,capital,population,region`;
         
         const response = await fetch(URL);
 
